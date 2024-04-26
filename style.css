@@ -4,18 +4,39 @@
     box-sizing: border-box;
 }
 
-#personajes {
-    /* Complete el CSS aqui */
+
+body{
+    background: rgb(154,167,167);
+    background: linear-gradient(0deg, rgba(154,167,167,1) 0%, rgba(13,70,161,1) 100%);
 }
+#personajes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem; 
+    
+}
+
 
 .personaje {
-/* Complete el CSS aqui */
+    border: 3px solid rgb(81, 209, 231); 
+    width: 215px;
+    margin-bottom: 1rem; 
+    text-align: center;
+    margin-top: 2rem;
+    box-shadow: 6px 6px 11px 0 #5eff00;
+
 }
+
+
 
 .personaje__nombre {
-/* Complete el CSS aqui */
+    color: rgb(255, 255, 255); 
 }
 
+
 .personaje__imagen {
-/* Complete el CSS aqui */
+    width: 200px;
+    height: 200px; 
+    object-fit: cover;
 }

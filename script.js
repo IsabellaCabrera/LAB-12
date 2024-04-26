@@ -12,9 +12,11 @@ const agregarPersonaje = (nombre, imagen) => {
   };
   
   const render = async () => {
-    // 1. Completar el código aqui para cargar el archivo json y crear los elementos HTML.
-    // 2. Para cargar el archivo json se debe usar la función fetch y luego convertir la respuesta a un objeto JSON usando la función json().
-    // 3. La función agregarPersonaje(nombre, imagen) recibe los datos del personaje y crea el elemento HTML con la información del personaje.
+    const response = await fetch('personajes.json');
+      const { personajes } = await response.json();
+      for (const { name, image } of personajes) {
+        agregarPersonaje(name, image);
+    }
   };
   
   document.addEventListener("DOMContentLoaded", render);
